@@ -1,0 +1,71 @@
+@import "../../scss/mixins";
+
+.sccontact {
+  &__top {
+    grid-column: span 12;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gutter);
+  }
+  &__middle {
+    grid-column: span 12;
+    grid-row: 2 / 6;
+    display: grid;
+    grid-template-columns: subgrid;
+    &-content {
+      grid-column: 1 / 5;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: var(--gutter);
+      .content {
+        max-width: 80%;
+      }
+    }
+    &-image {
+      grid-column: span 4;
+      position: relative;
+      overflow: hidden;
+      img {
+        @include img-center;
+        object-position: center;
+      }
+    }
+  }
+  &__bottom {
+    grid-column: span 12;
+    grid-row: 7 / 9;
+    display: grid;
+    grid-template-columns: subgrid;
+    &-title {
+      font-size: var(--fs-emphasize-sm);
+      grid-column: 1 / 8;
+      overflow: hidden;
+    }
+    &-contact {
+      grid-column: 9 / 13;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: var(--gutter);
+      .contact {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: var(--gutter);
+        overflow: hidden;
+      }
+      .terms {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--gutter);
+        margin-top: auto;
+        overflow: hidden;
+      }
+    }
+  }
+}

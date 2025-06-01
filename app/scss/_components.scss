@@ -1,0 +1,22 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, auto);
+  grid-column-gap: var(--gutter);
+  grid-row-gap: var(--gutter);
+  padding: var(--gutter);
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: -1%;
+  left: -1%;
+  width: 102%;
+  height: 102%;
+  background-color: var(--bg-color);
+}
+
+.text-container {
+  overflow: hidden;
+}

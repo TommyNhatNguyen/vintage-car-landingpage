@@ -1,0 +1,38 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--ff-medium);
+  font-size: var(--fs-body);
+  line-height: normal;
+  margin: auto;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  visibility: hidden;
+  &.loaded {
+    visibility: visible;
+  }
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  max-width: var(--max-width-container);
+  padding-right: var(--pd-container);
+  padding-left: var(--pd-container);
+}
+
+.horizontal-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  section {
+    flex-shrink: 0;
+    height: 100vh;
+  }
+}

@@ -1,0 +1,27 @@
+:root {
+  --max-width-page: 1960px;
+  --max-height-page: 976px;
+  --max-width-container: calc(var(--max-width-page) - var(--pd-container) * 2);
+  --pd-container: 20px;
+  --gutter: 20px;
+  --bg-color: #fbf7f4;
+  --text-color: #050301;
+  --ff-bold: "ab";
+  --ff-medium: "am";
+  --ff-regular: "ar";
+  --ff-semibold: "asb";
+
+  /* Typography Scale */
+  --fs-emphasize: calc(var(--fs-h1) * 3);
+  --fs-emphasize-sm: calc(var(--fs-h1) * 2);
+  --fs-h1: 7.8rem; /* Main heading */
+  --fs-h2: 5.2rem; /* Secondary heading (2/3 of h1) */
+  --fs-h3: 3.9rem; /* Tertiary heading (1/2 of h1) */
+  --fs-h4: 2.6rem; /* Fourth level heading (1/3 of h1) */
+  --fs-h5: 2rem; /* Fifth level heading (1.25x body) */
+  --fs-h6: 1.8rem; /* Sixth level heading (1.125x body) */
+  --fs-subtitle: 2.4rem; /* Subtitle text (1.5x body) */
+  --fs-body: 1.6rem; /* Body text */
+  --fs-small: 1.4rem; /* Small text (0.875x body) */
+  --fs-xs: 1.2rem; /* Extra small text (0.75x body) */
+}

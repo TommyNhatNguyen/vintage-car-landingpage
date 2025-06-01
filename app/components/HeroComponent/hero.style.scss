@@ -1,0 +1,52 @@
+@import "../../scss/mixins";
+.schero {
+  height: 100vh;
+  max-height: var(--max-height-page);
+  .schero-wrapper {
+    height: 100%;
+  }
+  &__content {
+    grid-column: 1 / 6;
+    grid-row: 1/ 9;
+    margin: var(--gutter);
+    display: grid;
+    grid-template-rows: subgrid;
+    &-title {
+      display: flex;
+      align-items: baseline;
+      gap: calc(var(--gutter) * 2);
+      grid-row: 1 / 2;
+      flex-wrap: wrap;
+      .title {
+        font-size: var(--fs-h1);
+        font-family: var(--ff-semibold);
+      }
+      .subtitle {
+        font-size: var(--fs-body);
+      }
+    }
+    &-desc {
+      grid-row: 6 / 7;
+      align-content: flex-end;
+      max-width: 50%;
+    }
+    &-page {
+      grid-row: 8 / 9;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: var(--gutter);
+    }
+  }
+  &__thumbnail {
+    overflow: hidden;
+    grid-column: 6 / 13;
+    grid-row: 1 / 9;
+    position: relative;
+    img {
+      @include img-center;
+      object-position: top;
+    }
+  }
+}

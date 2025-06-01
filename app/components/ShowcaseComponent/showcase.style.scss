@@ -1,0 +1,51 @@
+@import "../../scss/mixins";
+.scshowcase {
+  &__top {
+    grid-row: 1 / 2;
+    grid-column: span 12;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--gutter);
+    &-year {
+      font-size: var(--fs-h2);
+    }
+  }
+  &__middle {
+    grid-row: 4 / 5;
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: subgrid;
+    &-text {
+      grid-column: 1 /4;
+      align-content: flex-end;
+      overflow: hidden;
+    }
+    &-arrow {
+      grid-column: 12 / 13;
+      align-content: flex-end;
+      justify-self: flex-end;
+      overflow: hidden;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  &__bottom {
+    grid-row: 5 / 8;
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: subgrid;
+    &-item {
+      aspect-ratio: 1/1;
+      grid-column: span 4;
+      overflow: hidden;
+      position: relative;
+      img {
+        @include img-center;
+        object-position: right bottom;
+      }
+    }
+  }
+}
