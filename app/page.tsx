@@ -13,11 +13,9 @@ import { GSDevTools, ScrollSmoother, ScrollTrigger, SplitText } from "gsap/all";
 export default function Home() {
   const [scrollTween, setScrollTween] = useState<GSAPTween>();
   const mainRef = useRef<HTMLDivElement>(null);
-  window.addEventListener("load", () => {
-    document.body.classList.add("loaded");
-  });
   useGSAP(
     () => {
+      gsap.set(document.body, { visibility: "visible" });
       gsap.registerPlugin(ScrollSmoother);
       gsap.registerPlugin(ScrollTrigger);
       gsap.registerPlugin(GSDevTools);
