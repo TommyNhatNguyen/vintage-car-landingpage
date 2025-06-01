@@ -15,11 +15,15 @@ const HeroComponent = (props: Props) => {
       const heroImg = heroThumbnailRef.current?.firstChild as HTMLImageElement;
       const heroImgOverlay = heroThumbnailRef.current
         ?.lastChild as HTMLDivElement;
-      tl.to(heroImgOverlay, {
-        xPercent: 100,
-        duration: 1.5,
-        ease: "power4.out",
-      }).to(
+      tl.to(
+        heroImgOverlay,
+        {
+          xPercent: 100,
+          duration: 1.5,
+          ease: "power4.out",
+        },
+        "<+0.3"
+      ).to(
         heroImg,
         {
           scale: 1.1,
