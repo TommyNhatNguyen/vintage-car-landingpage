@@ -38,7 +38,7 @@ const ProductComponent = (props: Props) => {
           ".scproduct__info-content"
         ) as HTMLParagraphElement
       );
-      productListItems.forEach((item, index) => {
+      productListItems.forEach((item) => {
         const isTextItem = item.classList.contains("--content");
         if (isTextItem) {
           const num = item.querySelector(
