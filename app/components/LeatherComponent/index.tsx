@@ -56,7 +56,7 @@ const LeatherComponent = (props: Props) => {
         ".scleather__thumbnail"
       ) as HTMLDivElement;
       // Content Top Animation
-      tl.textIntro([contentTopNum], {}, "<+0.2");
+      tl.textIntro([contentTopNum], {}, "<");
       tl.textIntro([contentTopInfoNum], {}, "<");
       tl.textIntro([contentTopInfoTitle], {}, "<");
       // Content Bottom Animation
@@ -74,7 +74,6 @@ const LeatherComponent = (props: Props) => {
         ).to(
           image,
           {
-            scale: 1.1,
             transformOrigin: "left center",
             duration: 1.5,
             ease: "power4.out",
@@ -83,19 +82,18 @@ const LeatherComponent = (props: Props) => {
         );
       });
       // Content Middle Animation
-      tl.textIntro([contentMiddleInfo], {}, "<+0.2");
+      tl.textIntro([contentMiddleInfo], {}, "<");
       tl.from(
         contentMiddleContent.lines,
         {
           xPercent: -100,
           opacity: 0,
-          scale: 0.2,
-          duration: 1.2,
+          duration: 0.6,
           stagger: {
             amount: 0.3,
             from: "start",
           },
-          ease: "back(1)",
+          ease: "back(0.8)",
         },
         "<+0.1"
       );
@@ -104,16 +102,15 @@ const LeatherComponent = (props: Props) => {
         thumbnail.children[1],
         {
           xPercent: 100,
-          duration: 1.5,
+          duration: 0.6,
           ease: "power4.out",
         },
-        "<+0.1"
+        "<"
       ).to(
         thumbnail.children[0],
         {
-          scale: 1.1,
           transformOrigin: "left center",
-          duration: 1.5,
+          duration: 0.6,
           ease: "power4.out",
         },
         "<"

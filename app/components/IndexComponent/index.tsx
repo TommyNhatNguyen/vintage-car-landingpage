@@ -24,7 +24,7 @@ const IndexComponent = (props: Props) => {
       });
       const nav = indexRef.current?.querySelector(
         ".scindex__nav"
-      ) as HTMLDivElement;  
+      ) as HTMLDivElement;
       const thumbnailContainer = indexRef.current?.querySelector(
         ".scindex__content-thumbnail"
       ) as HTMLDivElement;
@@ -64,7 +64,6 @@ const IndexComponent = (props: Props) => {
       ).to(
         thumbnailImage,
         {
-          scale: 1.1,
           transformOrigin: "left center",
           duration: 1.5,
           ease: "power4.out",
@@ -72,7 +71,7 @@ const IndexComponent = (props: Props) => {
         "<"
       );
       // Thumbnail Content Animation
-      tl.textIntro([thumbnailTitle], {}, "<+0.2");
+      tl.textIntro([thumbnailTitle], {}, "<");
       tl.textIntro([thumbnailNum], {}, "<");
       // Info Animation
       infoContent.forEach((content, index) => {
@@ -83,19 +82,18 @@ const IndexComponent = (props: Props) => {
         const copyright = content.querySelector(
           ".content__copyright"
         ) as HTMLSpanElement;
-        tl.textIntro([num], {}, "<+0.2");
+        tl.textIntro([num], {}, "<+0.1");
         tl.from(
           desc.lines,
           {
             xPercent: -100,
             opacity: 0,
-            scale: 0.2,
-            duration: 1.2,
+            duration: 0.6,
             stagger: {
               amount: 0.3,
               from: "start",
             },
-            ease: "back(1)",
+            ease: "back(0.8)",
           },
           "<+0.1"
         );

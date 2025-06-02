@@ -26,7 +26,6 @@ const HeroComponent = (props: Props) => {
       ).to(
         heroImg,
         {
-          scale: 1.1,
           transformOrigin: "left center",
           duration: 1.5,
           ease: "power4.out",
@@ -69,13 +68,12 @@ const HeroComponent = (props: Props) => {
           tl.from(splitText.lines, {
             opacity: 0,
             xPercent: -100,
-            duration: 1.5,
+            duration: 0.8,
             ease: "power4.out",
           }).from(
             splitText.chars,
             {
-              scale: 0.2,
-              duration: 1.2,
+              duration: 0.8,
               ease: "power4.out",
               stagger: {
                 amount: 0.3,
@@ -88,32 +86,31 @@ const HeroComponent = (props: Props) => {
         },
         extendTimeline: true,
       });
-      tl.textIntro([title], {}, "<+0.2");
-      tl.textIntro([subtitle], {}, "<+0.2");
+      tl.textIntro([title], {}, "<");
+      tl.textIntro([subtitle], {}, "<");
       tl.from(
         desc.lines,
         {
           xPercent: -100,
           opacity: 0,
-          scale: 0.2,
-          duration: 1.2,
+          duration: 0.8,
           stagger: {
             amount: 0.3,
             from: "start",
           },
-          ease: "back(1)",
+          ease: "back(0.8)",
         },
-        "<+0.1"
+        "<"
       );
       tl.from(
         pageContainer.children,
         {
           xPercent: -100,
           opacity: 0,
-          duration: 1.5,
+          duration: 0.8,
           ease: "back(1)",
         },
-        "<+0.2"
+        "<"
       );
     },
     {

@@ -57,13 +57,12 @@ const ShowcaseComponent = (props: Props) => {
         {
           xPercent: -100,
           opacity: 0,
-          scale: 0.2,
-          duration: 1.2,
+          duration: 0.6,
           stagger: {
             amount: 0.3,
             from: "start",
           },
-          ease: "back(1)",
+          ease: "back(0.8)",
         },
         "<+0.1"
       );
@@ -83,7 +82,6 @@ const ShowcaseComponent = (props: Props) => {
         ).to(
           image,
           {
-            scale: 1.1,
             transformOrigin: "left center",
             duration: 1.5,
             ease: "power4.out",

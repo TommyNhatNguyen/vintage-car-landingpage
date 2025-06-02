@@ -62,19 +62,18 @@ const ContactComponent = (props: Props) => {
       tl.textIntro([topSubtitle], {}, "<");
       tl.textIntro([topCopyright], {}, "<");
       // Middle Animation
-      tl.textIntro([middleNum], {}, "<+0.2");
+      tl.textIntro([middleNum], {}, "<+0.1");
       tl.from(
         middleContent.lines,
         {
           xPercent: -100,
           opacity: 0,
-          scale: 0.2,
-          duration: 1.2,
+          duration: 0.6,
           stagger: {
             amount: 0.3,
             from: "start",
           },
-          ease: "back(1)",
+          ease: "back(0.8)",
         },
         "<+0.1"
       );
@@ -85,14 +84,13 @@ const ContactComponent = (props: Props) => {
           overlay,
           {
             xPercent: 100,
-            duration: 1.5,
+            duration: 0.8,
             ease: "power4.out",
           },
-          "<+0.2"
+          "<+0.1"
         ).to(
           img,
           {
-            scale: 1.1,
             transformOrigin: "left center",
             duration: 1.5,
             ease: "power4.out",
@@ -101,10 +99,10 @@ const ContactComponent = (props: Props) => {
         );
       });
       // Bottom Animation
-      tl.textIntro([bottomTitle], {}, "<+0.2");
-      tl.textIntro([bottomContact.children[0]], {}, "<+0.2");
+      tl.textIntro([bottomTitle], {}, "<");
+      tl.textIntro([bottomContact.children[0]], {}, "<");
       tl.textIntro([bottomContact.children[1]], {}, "<");
-      tl.textIntro([bottomTerms.children[0]], {}, "<+0.2");
+      tl.textIntro([bottomTerms.children[0]], {}, "<");
       tl.textIntro([bottomTerms.children[1]], {}, "<");
     },
     {
